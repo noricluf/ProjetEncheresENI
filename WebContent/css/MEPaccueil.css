@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+.gauche {
+	float: left;
+}
+
+.droite {
+	float: right;
+}
+
+body {
+	background-color: white;
+}
+
+.formidentifiant {
+	display: flex;
+	justify-content: center;
+	text-align: right;
+}
+
+.formtest {
+	margin: 1em;
+	display: inline-block;
+	width: 1080px;
+	text-align: right;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	line-height: 20px;
+}
+
+.bouttoncarre {
+	padding: 15px;
+}
+ 
+.btncreercompte {
+	margin-left: 48%;
+	padding: 20px;
+}
+
+.centerprofil {
+	margin-left:20%;
+	margin-right:20%;
+	display: flex;
+	justify-content: space-around;
+}
