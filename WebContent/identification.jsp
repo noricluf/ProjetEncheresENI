@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,15 +10,17 @@
 	<h3 class="gauche">ENI-Enchères</h3>
 <body>
 	<br><br><br><br><br><br><br><br><br>
-	<form action="" name="identification" method="get">
+	<form action="login" name="identification" method="post">
 		<div class="formtest">
 			<label for="identifiant" >Identifiants : </label>
 			<input type="text" name="identifiant" id="identifiant">
+			<span class="erreur">${form.erreurs['identifiant'] }</span>
 		</div>
 		<br>
 		<div class="formtest">
 			<label for="mdp" >Mot de passe : </label>
-			<input type="text" name="mdp" id="mdp">
+			<input type="password" name="mdp" id="mdp">
+			<span class="erreur">${form.erreurs['motDePasse'] }</span>
 		</div>
 		<br>
 		<br>
@@ -28,6 +30,10 @@
 			<label for="sesouvenir" >Se souvenir de moi <br><a href="">Mot de passe oublié</a></label>
 			<br>
 		</div>
+		<p class="${empty form.erreurs ? 'succes' : 'erreur' }">${form.resultat}</p>
+		<c:if test="${!empty sessionScope.sessionUtilisateur}">
+			<p class="succes">Vous etes connecté avec l'identifiant : ${sessionScope.sessionUtilisateur.identifiant }</p>
+		</c:if>
 		<br><br>
 		<input class="btncreercompte" type="submit" value="Créer un compte">
 	</form>
