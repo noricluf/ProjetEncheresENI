@@ -29,7 +29,11 @@
 			<br>
 		</div>
 		<br><br>
-		<input class="btncreercompte" type="submit" value="Créer un compte">
+	</form>
+	<form method="GET" action="creationprofil.jsp">
+		<div class="center">
+			<input type="submit" value="Créer un compte">
+		</div>	
 	</form>
 </body>
 </html>

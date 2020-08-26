@@ -11,7 +11,7 @@
 	<h3 class="gauche">ENI-Enchères</h3>
 	<br><br><br>
 	<h1 class="center"> Mon profil</h1>
-		<form>
+		<form action="<%=request.getContextPath()%>/ServletCreationCompte" method="post">
 			<div class="centerprofil">
 				<div>
 					<label for="pseudo">Pseudo : </label>
@@ -30,7 +30,7 @@
 				</div>
 				<div>
 					<label for="email">Email : </label>
-					<input type="text" name="email" id="email">
+					<input type="email" name="email" id="email">
 				</div>
 			</div>
 			<br><br>
@@ -62,8 +62,8 @@
 					<input type="password" name="motdepasse" id="motdepasse">
 				</div>
 				<div>
-					<label for="confirmation">Confirmation : </label>
-					<input type="password" name="confirmation" id="confirmation">
+					<label for="confirmationmdp">Confirmation : </label>
+					<input type="password" name="confirmationmdp" id="confirmationmdp">
 				</div>
 			</div>
 			<br><br>
