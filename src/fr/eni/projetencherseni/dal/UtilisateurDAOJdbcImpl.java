@@ -1,5 +1,6 @@
 package fr.eni.projetencherseni.dal;
 
+<<<<<<< HEAD
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -36,4 +37,10 @@ public class UtilisateurDAOJdbcImpl  implements UtilisateurDAO{
 		}
 		
 	}
+=======
+public class UtilisateurDAOJdbcImpl  implements UtilisateurDAO{
+	
+	private static final String INSERT_UTILISATEUR="insert into utilisateurs()";
+	
+>>>>>>> 8af6cbe6f84f4c592c089330ad4a06b3333de5f5
 }
